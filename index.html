@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>JavaScript Basics</title>
+</head>
+<body>
+    <!-- ROCK PAPER SCISSORS -->
+    <p>Rock Paper Scissors</p>
+    <p>
+        <button onclick="
+        number = Math.random();
+        if(number >= 0 && number <= 1/3){
+            computer = 'rock';
+            alert('You tie! Computer chose rock');
+        }
+        else if(number >= 1/3 && number <= 2/3){
+            computer = 'paper';
+            alert('You lose! Computer chose paper');
+        }
+        else if(number >= 2/3 && number <= 1){
+            computer = 'scissors';
+            alert('You win! Computer chose scissors');
+        }
+        "
+        >Rock</button>
+        <button onclick="        
+        number = Math.random();
+        if(number >= 0 && number <= 1/3){
+            computer = 'rock';
+            alert('You win! Computer chose rock');
+        }
+        else if(number >= 1/3 && number <= 2/3){
+            computer = 'paper';
+            alert('You tie! Computer chose paper');
+        }
+        else if(number >= 2/3 && number <= 1){
+            computer = 'scissors';
+            alert('You lost! Computer chose scissors');
+        }
+        ">Paper</button>
+        <button onclick="        
+        number = Math.random();
+        if(number >= 0 && number <= 1/3){
+            computer = 'rock';
+            alert('You lost! Computer chose rock');
+        }
+        else if(number >= 1/3 && number <= 2/3){
+            computer = 'paper';
+            alert('You win! Computer chose paper');
+        }
+        else if(number >= 2/3 && number <= 1){
+            computer = 'scissors';
+            alert('You tie! Computer chose scissors');
+        }
+        ">Scissors</button>
+    </p>
+
+    <script src ="action.js"></script>
+</body>
+</html>

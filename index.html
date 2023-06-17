@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p>YouTube Subscribe Button</p>
+    <button onclick = "
+    subscribebtn()" class = "subscribeButton">Subscribe</button>
+    <p>Rock Paper Scissors</p>
+    <p>
+        <button onclick="computerChoice();
+        rock();
+        ">Rock</button>
+        <button onclick="computerChoice();
+        paper();
+        ">Paper</button>
+        <button onclick="computerChoice();scissors();
+        ">Scissors</button>
+    </p>
+    <p class= "result"></p>
+    <p class= "plays"></p>
+    <p class = "score"></p>
+    <button onclick="resetScore()">Reset Score</button>
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = +$10 shipping.</p>
+    <p>Orders over $40 = FREE shipping.</p>
+    <p>
+        <input type="text" name="costOfOrder" class = "cost",id="costOfOrder" placeholder="Cost of order" onkeydown="
+            inputRun(event)">
+        <button class = "calculate" onclick = "calculateCost()">Calculate</button>
+    </p>
+    <p class = totalCost></p>
+    <script src = "index.js"></script>
+</body>
+</html>

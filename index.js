@@ -1,4 +1,25 @@
 const subscribe = document.querySelector('.subscribeButton');
+const r = document.querySelector('.rock');
+const p = document.querySelector(".paper");
+const s = document.querySelector(".scissors");
+const reset = document.querySelector('.reset');
+const calculate = document.querySelector('.calculate');
+const cart = document.querySelector('.cost');
+// document.querySelector(".cost").addEventListener("keydown", inputRun(event));
+r.addEventListener("click", rock);
+r.addEventListener("click",computerChoice);
+p.addEventListener("click", paper);
+p.addEventListener("click", computerChoice);
+s.addEventListener("click", scissors);
+s.addEventListener("click", computerChoice);
+cart.addEventListener("keydown", inputRun);
+reset.addEventListener("click", resetScore);
+subscribe.addEventListener("click", subscribebtn );
+calculate.addEventListener("click", calculateCost);
+let computer;
+let number;
+let result;
+
 function subscribebtn(){
     if(subscribe.innerHTML === 'Subscribe'){
         subscribe.innerHTML = 'Subsrcibed';
@@ -9,9 +30,7 @@ function subscribebtn(){
         subscribe.classList.remove('subscribed');
     }
 }
-let computer;
-let number;
-let result;
+
 let score = JSON.parse(localStorage.getItem("Scores")) || {
   wins: 0,
   losses: 0,
@@ -100,7 +119,6 @@ function resetScore() {
   updateScore();  
 }
 
-
 function updateScore(){
       document.querySelector(
         ".score"
@@ -119,6 +137,7 @@ function inputRun(event){
     calculateCost();
   }
 }
+
 // const cart = {
 //   basketball: {
 //     price: 2095,

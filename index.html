@@ -1,32 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOM</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <p>YouTube Subscribe Button</p>
     <button class="subscribeButton">Subscribe</button>
-    <p>Rock Paper Scissors</p>
-    <p>
-        <button class= "rock" >Rock</button>
-        <button class = "paper" >Paper</button>
-        <button class = "scissors">Scissors</button>
-    </p>
-    <p class= "result"></p>
-    <p class= "plays"></p>
-    <p class = "score"></p>
-    <button class = "reset">Reset Score</button>
+    <div class = "rps">
+        <p>Rock Paper Scissors</p>
+        <p>
+        <button class="rock"><img class = "img" src="./assets/rock-emoji.png" alt="" /></button>
+        <button class="paper"><img class="img" src="./assets/paper-emoji.png" alt=""></button>
+        <button class="scissors"><img class= "img" src="./assets/scissors-emoji.png" alt=""></button>
+        </p>
+        <p class="result"></p>
+        <p class="plays">
+            You
+            <img class ="img" src="./assets/rock-emoji.png" alt="">
+            <img class = "img" src="./assets/scissors-emoji.png" alt="">
+            Computer
+        </p>
+        <p class="score"></p>
+        <button class="reset">Reset Score</button>
+    </div>
     <p>Amazon Shipping Calculator</p>
     <p>Orders under $40 = +$10 shipping.</p>
     <p>Orders over $40 = FREE shipping.</p>
     <p>
-        <input type="text" name="costOfOrder" class = "cost",id="costOfOrder" placeholder="Cost of order">
-        <button class = "calculate">Calculate</button>
+      <input
+        type="text"
+        name="costOfOrder"
+        class="cost"
+        ,id="costOfOrder"
+        placeholder="Cost of order"
+      />
+      <button class="calculate">Calculate</button>
     </p>
-    <p class = totalCost></p>
-    <script src = "index.js"></script>
-</body>
+    <p class="totalCost"></p>
+    <script src="index.js"></script>
+  </body>
 </html>

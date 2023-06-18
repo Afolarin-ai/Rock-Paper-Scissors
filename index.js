@@ -6,12 +6,12 @@ const reset = document.querySelector('.reset');
 const calculate = document.querySelector('.calculate');
 const cart = document.querySelector('.cost');
 // document.querySelector(".cost").addEventListener("keydown", inputRun(event));
-r.addEventListener("click", rock);
 r.addEventListener("click",computerChoice);
-p.addEventListener("click", paper);
+r.addEventListener("click", rock);
 p.addEventListener("click", computerChoice);
-s.addEventListener("click", scissors);
+p.addEventListener("click", paper);
 s.addEventListener("click", computerChoice);
+s.addEventListener("click", scissors);
 cart.addEventListener("keydown", inputRun);
 reset.addEventListener("click", resetScore);
 subscribe.addEventListener("click", subscribebtn );
@@ -46,6 +46,7 @@ updateScore();
 //     }
 // }
 console.log(score);
+
 function computerChoice() {
   number = Math.random();
   if (number >= 0 && number < 1 / 3) {
@@ -66,9 +67,10 @@ function rock() {
   }
   scoreboard();
   document.querySelector(".result").innerHTML = `You ${result}`;
-  document.querySelector(
-    ".plays"
-  ).innerHTML = `You rock - ${computer} Computer`;
+  document.querySelector(".plays").innerHTML = `You
+        <img class = "img" src="./assets/rock-emoji.png" alt="">
+        <img class = "img" src="./assets/${computer}-emoji.png" alt="">
+        Computer`;
   localStorage.setItem("Scores", JSON.stringify(score));
 }
 function paper() {
@@ -81,9 +83,10 @@ function paper() {
   }
   scoreboard();
   document.querySelector(".result").innerHTML = `You ${result}`;
-  document.querySelector(
-    ".plays"
-  ).innerHTML = `You paper - ${computer} Computer`;
+  document.querySelector(".plays").innerHTML = `You
+        <img class = "img" src="./assets/paper-emoji.png" alt="">
+        <img class = "img" src="./assets/${computer}-emoji.png" alt="">
+        Computer`;
   localStorage.setItem("Scores", JSON.stringify(score));
 }
 
@@ -97,7 +100,10 @@ function scissors() {
   }
   scoreboard();
   document.querySelector(".result").innerHTML = `You ${result}`;
-  document.querySelector(".plays").innerHTML = `You scissors - ${computer} Computer`;
+  document.querySelector(".plays").innerHTML = `You
+        <img class = "img" src="./assets/scissors-emoji.png" alt="">
+        <img class = "img" src="./assets/${computer}-emoji.png" alt="">
+        Computer`;
   localStorage.setItem("Scores", JSON.stringify(score));
 }
 function scoreboard() {
